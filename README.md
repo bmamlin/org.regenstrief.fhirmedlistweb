@@ -3,14 +3,19 @@ Patient-Facing Medication Reconciliation
 
 This is a mock app created by the [Regenstrief](https://www.regenstrief.org) [CBMI](https://www.regenstrief.org/centers/cbmi/) team for the [HIMSS](http://www.himss.org)-sponsored [Fast Healthcare Interoperability Resources (FHIR) Connectathon](http://indiana.himsschapter.org/Events/event.aspx?ItemNumber=47375) in Indianapolis on 23 and 24, April 2016.
 
+Goal
+----
 The goal was to create an application that uses FHIR, pulling data from [Open Epic](https://open.epic.com) or a mock [INPC](http://www.ihie.org/indiana-network-for-patient-care) FHIR API. We chose to create a patient-facing medication reconciliation application.
 
-#### Watch a demonstration on YouTube:
+Watch a demonstration on YouTube:
+---------------------------------
 [![Demonstration of patient-facing medication reconciliation](https://img.youtube.com/vi/Z-eF0852o2g/0.jpg)](https://www.youtube.com/watch?v=Z-eF0852o2g)
 
 ...or...
 
-#### [Try the Live Demo](https://bmamlin.github.io/org.regenstrief.fhirmedlistweb/index.html)
+Try it out for yourself
+-----------------------
+Try the [Live Demo](https://bmamlin.github.io/org.regenstrief.fhirmedlistweb/index.html) on your smartphone.
 
 Context
 -------
@@ -32,3 +37,12 @@ Potential Enhancements
 * Allow the patient to add to the list (prescription not shown, vitamins, herbal medications, etc.)
 * Let the patient save or email the final report to themselves or their provider(s).
 * Send the final report back to the EHR to be incorporated within the Medication Reconciliation process.
+
+Thanks to Team 2
+----------------
+* Cindi Hart
+* Suranga Kasthurirathne
+* Jamee Malan
+* Burke Mamlin
+* David Taylor
+* Jeff Warvel
