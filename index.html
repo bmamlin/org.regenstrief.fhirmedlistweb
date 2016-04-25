@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fhirApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Meds I Take</title>
+
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+</head>
+
+<body ng-controller="MainCtrl">
+
+<header>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" ng-click="clearPatient()">
+                Meds I Take
+                <span ng-show="patient"> ({{patient.fullname}})</span>
+            </a>
+        </div>
+    </div>
+</nav>
+</header>
+
+<div id="content">
+    <div class="container" ng-hide="patient" ng-controller="PatientsCtrl">
+        <h2>"Sign in" as patient</h2>
+        <ul class="row">
+            <li ng-repeat="patient in patients">
+                <a href="#" class="patientName" ng-click="selectPatient(patient)">{{patient.fullname}}</a></li>
+        </ul>
+    </div>
+    <div class="container" ng-show="patient && !reviewing" ng-controller="MedicationsCtrl" ng-swipe-left="next()" ng-swipe-right="prev()">
+        <div class="loading" ng-hide="meds">
+            Loading...
+        </div>
+        <div ng-repeat="med in meds | orderBy:'medClinicalName'" class="row">
+            <div ng-show="currentMed==$index">
+            <div>
+                <h2 class="text-center">{{$index+1}} of {{meds.length}}</h2>
+            </div>
+            <!--
+            <div style="float:right">
+                <img src="http://pillbox.nlm.nih.gov/assets/small/540920173.jpg" width="160" />
+            </div>
+            -->
+            <div class="drugName">
+                <h2 ng-class="med.confirmClass">{{med.medClinicalName}}</h2>
+            </div>
+            <div class="medImage" ng-show="med.imageURL">
+                <img ng-src="{{med.imageURL}}" />
+            </div>
+            <div class="medActions">
+                <button type="button" class="btn btn-success" ng-click="yes(med)" ng-class="med.actionClass[0]">Yes</button>
+                <button type="button" class="btn btn-danger" ng-click="no(med)" ng-class="med.actionClass[1]">No</button>
+                <button type="button" class="btn btn-warning" ng-click="dunno(med)" ng-class="med.actionClass[2]">Not sure</button>
+            </div>
+            <div class="doseInstructions">
+                {{med.doseInstructions}}
+            </div>
+            <div class="dateLastOrdered" ng-show="med.dateLastOrdered">
+                Last prescribed: {{med.dateLastOrdered}}
+            </div>
+            <div class="indications" ng-show="med.indications">
+                Used for conditions such as: {{med.indications.join(', ').toLowerCase()}}
+            </div>
+            <div ng-show="med.action=='yes'" class="indent">
+                <h3>Do you need refills?</h3>
+                <button type="button" class="btn btn-success" ng-click="refill(med)" ng-class="med.refillClass[0]">Yes</button>
+                <button type="button" class="btn btn-danger" ng-click="noRefill(med)" ng-class="med.refillClass[1]">No</button>
+            </div>
+            <div ng-show="med.action=='yes'" class="indent">
+                <h3>Do you ever miss doses?</h3>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="adherence" value="never">
+                        I never miss doses.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="adherence" value="sometimes">
+                        I sometimes miss doses.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="adherence" value="often">
+                        I frequently miss doses.
+                    </label>
+                </div>
+            </div>
+            <div ng-show="med.action=='no'" class="indent">
+                <h3>Why don't you take this med?</h3>
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" name="whyNot" value="intolerance">
+                        This makes me sick.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" name="whyNot" value="old">
+                        This is an old prescription.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" name="whyNot" value="cost">
+                        Too expensive.
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="checkbox" name="whyNot" value="other">
+                        Other reason.
+                    </label>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" ng-controller="ReviewCtrl" ng-show="reviewing">
+        <h2>Taking these:</h2>
+        <ul>
+            <li ng-repeat="med in takingMeds = (meds | filter:{action:'yes'} | orderBy:'medClinicalName')">
+                <img ng-src="{{med.imageURL}}" ng-show="med.imageURL" />
+                {{med.medClinicalName}}
+            </li>
+            <li ng-hide="takingMeds.length">
+                None
+            </li>
+        </ul>
+        <h2>NOT taking:</h2>
+        <ul>
+            <li ng-repeat="med in notTakingMeds = (meds | filter:{action:'no'}:true | orderBy:'medClinicalName')">
+                {{med.medClinicalName}}
+            </li>
+            <li ng-hide="notTakingMeds.length">
+                None
+            </li>
+        </ul>
+        <h2>Uncertain about:</h2>
+        <ul>
+            <li ng-repeat="med in uncertainMeds = (meds | filter:{action:'dunno'} | orderBy:'medClinicalName')">
+                {{med.medClinicalName}}
+            </li>
+            <li ng-hide="uncertainMeds.length">
+                None
+            </li>
+        </ul>
+        <h2>Refills:</h2>
+        <ul>
+            <li ng-repeat="med in refillMeds = (meds | filter:{refill:1, action:'yes'} | orderBy:'medClinicalName')">
+                {{med.medClinicalName}}
+            </li>
+            <li ng-hide="refillMeds.length">
+                None
+            </li>
+        </ul>
+    </div>
+</div>
+<footer ng-controller="FooterCtrl" ng-swipe-left="next()" ng-swipe-right="prev()">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <div ng-show="meds">
+            <button type="button" class="btn btn-default" ng-click="prev()" ng-show="currentMed > 0 && !reviewing">Previous</button>
+            <button type="button" class="btn btn-info" ng-click="next()" ng-show="currentMed < meds.length - 1 && !reviewing && (meds | orderBy:'medClinicalName')[currentMed].action">Next</button>
+            <button type="button" class="btn btn-default reviewButton" ng-click="review()" ng-hide="reviewing || currentMed == meds.length-1">Review</button>
+            <button type="button" class="btn btn-info reviewButton" ng-click="review()" ng-hide="reviewing || currentMed < meds.length-1">Review</button>
+            <button type="button" class="btn btn-default" ng-click="closeReview()" ng-show="reviewing">Close Review</button>
+        </div>
+    </div>
+
+        </div>
+    </div>
+</nav>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-touch.min.js"></script>
+<script src="js_app/medications.js"></script>
+<script src="js_app/patients.js"></script>
+<script src="js_app/main.js"></script>
+<script src="js_app/review.js"></script>
+<script src="js_app/footer.js"></script>
+
+</body>
+</html>

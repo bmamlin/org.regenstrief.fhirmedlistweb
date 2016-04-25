@@ -1,0 +1,10 @@
+[ {
+  "medClinicalName" : "Acetamnphn W/Cod",
+  "doseInstructions" : "test",
+  "dateLastOrdered" : "2015-10-28 15:34:12"
+}, {
+  "medClinicalName" : "DOSS Sodium 100 MG Oral Capsule",
+  "doseInstructions" : "1 Cap By Mouth 2 times daily as needed for constipation",
+  "dateLastOrdered" : "2015-10-28 15:34:12",
+  "rxcui" : "1115005"
+} ]

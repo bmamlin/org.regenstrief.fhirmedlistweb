@@ -1,0 +1,44 @@
+[
+{"patientName":"Jessica Argonaut", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+},
+{"patientName":"Flapjacks Ragsdale", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+},
+{"patientName":"Pancakes Ragsdale", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+},
+{"patientName":"Waffles Ragsdale", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+},
+{"patientName":"Bacon Ragsdale", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+},
+{"patientName":"Emily Williams", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+},
+{"patientName":"James Kirk", "meds":
+	[
+		{"name":"Ibuprophen", "clinicalName":"Ibuprophen 200 MG Tab", "sig":"take 2 tablets every 4 hours as needed", "date":"4/1/2016"},
+		{"name":"Sudafed", "clinicalName":"Sudafed Tab", "sig":"take 1 tablet every 6 hours as needed", "date":"4/3/2016"}
+	]
+}
+]

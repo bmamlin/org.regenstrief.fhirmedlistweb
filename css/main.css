@@ -1,0 +1,72 @@
+#content {
+    position: fixed;
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    overflow:auto;
+    padding: 5px;
+}
+
+.patientName {
+	font-size: 150%;
+}
+
+.loading {
+	font-size: 200%;
+}
+
+.indent {
+	margin-left: 20px;
+}
+
+.doseInstructions {
+	padding-bottom: 1em;
+}
+
+.dateLastOrdered {
+	color: #777;
+	padding-bottom: 1em;
+	font-style: italic;
+}
+
+.medImage {
+	padding-bottom: 1em;
+}
+
+.indications {
+	text-transform: capitalize;
+	padding-bottom: 1em;
+}
+
+.medActions {
+	padding-bottom: 1em;
+}
+
+.medAction-active {
+	opacity: 1.0;
+	border: thick solid green;
+}
+
+.medAction-inactive {
+	opacity: 0.3;
+	border: thick solid red;
+}
+
+.med-confirmed::before {
+	content: '\2714  ';
+	color: #449d44;
+}
+
+.med-denied {
+	text-decoration: line-through;
+}
+
+.med-unknown::before {
+		content: '? ';
+}
+
+.reviewButton {
+	margin-left: 3em;
+}
+

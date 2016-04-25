@@ -1,0 +1,59 @@
+[ {
+  "medClinicalName" : "Trypsin/Balsam Peru/Castor Oil O",
+  "doseInstructions" : "(Not Printed) test",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Lisinopril",
+  "doseInstructions" : "1 Tab By Mouth Daily",
+  "dateLastOrdered" : "2015-10-23 10:54:16",
+  "dateLastDispensed" : "2009-12-29 00:00:00",
+  "ndc" : "00378207510"
+}, {
+  "medClinicalName" : "Methylprednisolo",
+  "doseInstructions" : "(Not Printed) Take 6 tabs by mouth on day 1, then 5 tabs on day 2, then 4 tabs on day 3, then 3 tabs on day 4, then 2 tabs on day 5, then 1 tab on day 6",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Metoprolol Succinate XL",
+  "doseInstructions" : "100 mg PO daily for your high blood pressure - DO NOT BEGIN until you've finished taking all of your 25 mg short acting tablets as directed",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Clopidogrel",
+  "doseInstructions" : "1 Tab By Mouth Daily, Need to check for concomitant drugs,  for dementia (ICD9:290.0), Comments to pharmacy: Regular awareness session with patient",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Ergocalciferol(VitD2)50000units",
+  "doseInstructions" : "Cap1 Cap By Mouth 2 times weekly",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Metformin",
+  "doseInstructions" : "1000 MG By Mouth 2 times daily, with morning and evening meals",
+  "dateLastOrdered" : "2015-10-23 10:54:16",
+  "dateLastDispensed" : "2011-04-29 00:00:00",
+  "ndc" : "00172433160"
+}, {
+  "medClinicalName" : "Guaifenesin Syrup",
+  "doseInstructions" : "10 ML By Mouth Every 4 hours as needed for cough",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Cephalexin",
+  "doseInstructions" : "1 Tab By Mouth Every 6 hours",
+  "dateLastOrdered" : "2015-10-23 10:54:16",
+  "dateLastDispensed" : "2009-07-10 00:00:00",
+  "ndc" : "00093314705"
+}, {
+  "medClinicalName" : "Advil PM Liqui Gels 25-200 EQV",
+  "doseInstructions" : "Tab3 Tabs By Mouth 2 times daily",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Fenoprofen",
+  "doseInstructions" : "600 MG By Mouth 2 times daily",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Nicotine Patch",
+  "doseInstructions" : "Apply one 21 MG/DAY patch daily for 6 weeks. Then one 14 MG/DAY patch daily for 4 weeks. Then one 7 MG/DAY patch daily for 4 weeks",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+}, {
+  "medClinicalName" : "Ceftriaxone Inj",
+  "doseInstructions" : "test",
+  "dateLastOrdered" : "2015-10-23 10:54:16"
+} ]

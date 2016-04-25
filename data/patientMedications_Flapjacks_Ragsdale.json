@@ -1,0 +1,15 @@
+[ {
+  "medClinicalName" : "Digoxin 0.125 MG Oral Tablet",
+  "doseInstructions" : "0.25 mg PO Q6H for 4 DOSES",
+  "dateLastOrdered" : "2016-04-23 17:49:57",
+  "rxcui" : "197604"
+}, {
+  "medClinicalName" : "Amoxicillin 250 MG Oral Capsule",
+  "doseInstructions" : "750 MG By Mouth Every morning  for 10 Days",
+  "dateLastOrdered" : "2016-04-23 17:47:30",
+  "rxcui" : "308182"
+}, {
+  "medClinicalName" : "Gauze Abdom Pad",
+  "doseInstructions" : "aaaaaaaaaaaaaa",
+  "dateLastOrdered" : "2016-04-23 17:47:30"
+} ]
