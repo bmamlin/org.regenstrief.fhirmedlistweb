@@ -31,6 +31,9 @@
 
 <div id="content">
     <div class="container" ng-hide="patient" ng-controller="PatientsCtrl">
+        <p>
+        Welcome to <a href="https://www.regenstrief.org/centers/cbmi/">Regenstrief CBMI</a>'s mock patient-facing medication reconciliation application created for the <a href="http://indiana.himsschapter.org/Events/event.aspx?ItemNumber=47375">Eskenazi FHIR Connectathon</a>. This is a simulator. Pick a patient to mimic authentication. You can tap the header to start over at any point. Source code is available <a href="https://github.com/bmamlin/org.regenstrief.fhirmedlistweb">here</a>.
+        </p>
         <h2>"Sign in" as patient</h2>
         <ul class="row">
             <li ng-repeat="patient in patients">
