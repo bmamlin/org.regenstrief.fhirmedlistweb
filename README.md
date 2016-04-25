@@ -5,14 +5,12 @@ This is a mock app created by the [Regenstrief](https://www.regenstrief.org) [CB
 
 The goal was to create an application that uses FHIR, pulling data from [Open Epic](https://open.epic.com) or a mock [INPC](http://www.ihie.org/indiana-network-for-patient-care) FHIR API. We chose to create a patient-facing medication reconciliation application.
 
-Watch a demonstration on YouTube:
+#### Watch a demonstration on YouTube:
 [![Demonstration of patient-facing medication reconciliation](https://img.youtube.com/vi/Z-eF0852o2g/0.jpg)](https://www.youtube.com/watch?v=Z-eF0852o2g)
-
-[Video](https://www.youtube.com/watch?v=Z-eF0852o2g)
 
 ...or...
 
-[Try the Live Demo](https://bmamlin.github.io/org.regenstrief.fhirmedlistweb/index.html)
+#### [Try the Live Demo](https://bmamlin.github.io/org.regenstrief.fhirmedlistweb/index.html)
 
 Context
 -------
